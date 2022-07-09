@@ -4,6 +4,7 @@
 
 int main()
 {
+	SetConsoleTitle("IKategame");
 	RamUsage();
 }
 
