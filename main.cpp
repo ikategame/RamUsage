@@ -10,12 +10,12 @@ public:
 
 void RamUsage()
 {
-	my_class e;
-	e.memInfo.dwLength = sizeof(MEMORYSTATUSEX);
-	GlobalMemoryStatusEx(&e.memInfo);
+	my_class myclass;
+	myclass.memInfo.dwLength = sizeof(MEMORYSTATUSEX);
+	GlobalMemoryStatusEx(&myclass.memInfo);
 	while (true)
 	{
-		std::cout << "MEM: " << e.memInfo.dwMemoryLoad << std::endl;
+		std::cout << "MEM: " << myclass.memInfo.dwMemoryLoad << std::endl;
 		std::this_thread::sleep_for(std::chrono::seconds(1));
 	}
 }
